@@ -1,0 +1,17 @@
+{% load static %}
+
+<nav>
+    <ul class="topmenu">
+        {% for item in result.data %}
+            <li><a href="{{ item.item.url }}">{{ item.item.name }}</a>
+                {% if item.subitems %}
+                    <ul class="submenu">
+                        {% for subitem in item.subitems %}
+                            <li><a href="{{ subitem.url }}">{{ subitem.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
