@@ -59,9 +59,6 @@ class MenuItem(models.Model):
         blank=True,
         null=True)
 
-    # def get_absolute_url(self):
-    #     return "/%s" % self.url
-
     def __str__(self):
         return self.name
 
